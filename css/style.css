@@ -8,8 +8,6 @@
 }
 
 body {
-    /* width: 100vw;
-    height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -19,31 +17,34 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #1F2937;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 70vw;
-    height: 5vh;
-    /* border: 1px solid red; */
+    width: 1200px;
+    border: 1px solid red;
 }
 
-nav h3 {
-    font-size: 24px;
+.logo {
+    font-size: x-large;
+    font-weight: bold;
     color: #F9FAF8;
-    width: 25%;
-    /* border: 1px solid red; */
+    border: 1px solid red;
+    margin: 1rem 5% 1rem 5%;
+    min-width: 140px;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
-    Width: 32%;
     gap: 50px;
-    /* border: 1px solid red; */
+    margin: 1rem 5% 1rem 5%;
+    min-width: 480px;
+    border: 1px solid red;
 }
 
 nav li {
@@ -58,21 +59,21 @@ nav a {
 
 .title {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 70vw;
-    height: 40vh;
-    /* border: 1px solid red; */
+    width: 1200px;
+    border: 1px solid red;
 }
 
 .container-one {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 0 1 auto;
-    width: 25%;
-    /* border: 1px solid red; */
-    gap: 10px;
+    margin: 5% 5% 5% 5%;
+    max-width: 450px;
+    min-width: 450px;
+    gap: 1rem;
+    border: 1px solid red;
 }
 
 h1 {
@@ -102,9 +103,9 @@ h1 {
 }
 
 .title img {
-    width: 32%;
-    height: 70%;
-    /* border: 1px solid red; */
+    max-width: 450px;
+    margin: 5% 5% 5% 5%;
+    border: 1px solid red;
 }
 
 main {
@@ -114,17 +115,13 @@ main {
     /* border: 1px solid red; */
 }
 
-.info,
-.motivational {
+.info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 35vh;
-}
-
-.info {
     gap: 40px;
+    padding: 3rem 0 3rem 0;
 }
 
 .info h2 {
@@ -136,9 +133,12 @@ main {
 .image-list {
     display: flex;
     justify-content: center;
-    align-items: center; 
-    height: 60%;
-    width: 60%;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center; 
+    column-gap: 50px;
+    row-gap: 20px;
+    /* border: 1px solid red; */
 }
 
 .image-list div {
@@ -146,14 +146,14 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     gap: 10px;
-    height: 100%;
-    width: 18%
+    width: 220px;
+    /* border: 1px solid red; */
 }
 
 .image-list img {
-    width: 70%;
-    height: 70%;
+    width: 200px;
     border: 5px solid #3882F6;
     border-radius: 10px;
 }
@@ -161,8 +161,9 @@ main {
 .image-list p {
     text-align: center;
     font-size: 18px;
+    padding: 0;
     color: #1F2937;
-    width: 70%;
+    /* border: 1px solid red; */
 }
 
 .motivational{
@@ -170,11 +171,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 3rem 0 3rem 0;
 }
 
 .motivational div {
-    width: 30%;
-    height: 45%;
+    width: 600px;
 }
 
 .quote {
@@ -182,6 +183,7 @@ main {
     font-weight: light;
     font-style: italic;
     color: #1F2937;
+    margin-bottom: 20px;
 }
 
 .signed {
@@ -199,25 +201,23 @@ footer {
 }
 
 .blue-container {
-    height: 35vh;
+    padding: 5rem 0 5rem 0;
 }
 
 .blue {
-    width: 60%;
-    height: 40%;
     background-color: #3882F6;
     border-radius: 15px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding: 2rem 10rem; 
+    gap: 200px;
 }
 
 .click-zone {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%;
-    height: 100%;
 }
 
 .blue button{
@@ -232,8 +232,7 @@ footer {
 }
 
 .ad {
-    width: 35%;
-    height: auto;
+    padding: 2rem 0;
 }
 
 .ad h3 {
@@ -257,3 +256,82 @@ footer p {
     color: #E5E7EB;
 }
 
+
+@media (max-width: 1600px) {
+    .container-one {
+        margin-right: 0;
+    }
+    .title img {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1400px) {
+    .container-one {
+        margin-right: 5%;
+    }
+    .title img {
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+        align-content: center;
+        width: 100vw;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+
+    .title {
+        flex-direction: column;
+        text-align: center;
+        align-content: center;
+        width:100vw
+    }
+
+    .container-one{
+        margin-bottom: 0;
+    }
+
+    .container-one button {
+        align-self: center;
+    }
+    .blue {
+        padding: 2rem 5rem; 
+        gap: 150px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .blue {
+        padding: 2rem 5rem; 
+        gap: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .ad {
+        padding: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    nav ul {
+        gap: 20px;
+        min-width: 450px;
+    }
+    .motivational div {
+        width: 380px;
+    }
+    .blue {
+        width: 450px;
+        padding: 2rem; 
+        gap: 30px;
+    }
+}
